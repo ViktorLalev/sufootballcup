@@ -4,9 +4,8 @@
 @endsection
 @section('content')
 <div class="container">
-
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-10 col-md-offset-1">
           
             <h2>Информация за отбора:</h2>
             <ul>
@@ -24,6 +23,7 @@
             
            
         </div>
+        <!--
          <div class="col-sm-6">
          <h2>Класиране - Група А</h2>
            <table class="table table-hover">
@@ -79,7 +79,7 @@
                   
                 </tbody>
               </table>
-      </div>
+      </div>-->
     </div>
 </div>
 @endsection

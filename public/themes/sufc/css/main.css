@@ -956,6 +956,9 @@ ul.rss li::before {
   padding-top: 30px;
   padding-bottom: 30px;
   color: #bdc3c7;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
 }
 #footer a {
   color: #bdc3c7;
@@ -1088,4 +1091,8 @@ ul.faq li > div h3 {
   text-align: center;
   margin-top: 150px;
   margin-bottom: 150px;
+}
+.banners{
+  background-color: rgb(255, 255, 255);
+  padding: 13px;
 }

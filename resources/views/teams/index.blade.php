@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10">
             <table class="table table-hover">
                 <thead>
                   <tr>
@@ -18,9 +18,10 @@
                  @foreach ($teams as $team)
                
                     <tr>
-                        <td><a href="{{url('/teams/'.$team->team_name)}}">{{ $team->team_name }}</a></td>
+                        <td><a href="{{url('/teams/'.$team->team_name)}}"><img src="{{url('themes/sufc/images/team.png')}}" alt="team"> {{ $team->team_name }}</a></td>
                         <td>{{Lang::get('faculty.'.$team->faculty)}}</td>
                     </tr>
+
                  @endforeach
                   
                 </tbody>

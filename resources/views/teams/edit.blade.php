@@ -6,7 +6,7 @@
   @if (Auth::user()->id===$team[0]->id)
   <div class="container">
       <div class="row">
-           <div class="col-sm-6">
+           <div class="col-sm-5">
             <h2>Информация за отбора:</h2>
               <ul>
                 <li>Отбор:<b> {{$team[0]->team_name}}</b></li>

@@ -66,12 +66,15 @@
     <section id="content" >
         <div class="container-fluid">
             <div class="row">
-                 <div class="col-lg-2  col-lg-offset-1">
-                    <h3 class="center">С подкрепата на </h3>
-                    <hr>
-                     <p>
-                     <a href="http://students.uni-sofia.bg" target="_blank"><img src="{{url('partners/students.png')}}" alt="logo"></a>
-                     </p>
+                 <div class="col-lg-2  col-lg-offset-1 banners">
+                     
+                         <h3 class="center">С подкрепата на </h3>
+                        <hr>
+                         <p>
+                         <a href="http://students.uni-sofia.bg" target="_blank"><img src="{{url('partners/students.png')}}" alt="logo"></a>
+                         </p>
+                    
+                    
                 </div>  
                 <div class="col-lg-9">
                      @yield('content')
