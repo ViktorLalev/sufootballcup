@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Player;
+use Maatwebsite\Excel\Facades\Excel;
 use DB;
 
 class TeamsController extends Controller
@@ -55,4 +56,27 @@ class TeamsController extends Controller
 		$user->delete();
         return redirect()->action('TeamsController@edit',$request->team_name);
     }
+     protected function export()
+    {
+        $teams = User::all();
+        
+       
+        $data = array();
+        foreach ($teams as $team) {
+            $data[]=array($team->team_name);
+        }
+            
+
+        Excel::create('SUFC-Teams-2016', function($excel) use($data) {
+
+            $excel->sheet('Отбори', function($sheet) use($data) {
+
+                $sheet->fromArray($data);
+
+            });
+
+        })->export('xls');
+        
+    }
+            
 }

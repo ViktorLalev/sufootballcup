@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title')
+Отбори - SU Football Cup
+@endsection
 @section('content')
 <div class="container">
     <div class="row">

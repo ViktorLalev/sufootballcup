@@ -33,8 +33,8 @@
                 <ul class="nav navbar-nav navbar-right">
                      @include('partials.nav')
                      @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Вход</a> </li>
+                        <li><a href="{{ url('/register') }}">Регистрация</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -64,7 +64,21 @@
         @yield('main-slider')
     </section><!--/#main-slider-->
     <section id="content" >
-        @yield('content')
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-lg-2  col-lg-offset-1">
+                    <h3 class="center">С подкрепата на </h3>
+                    <hr>
+                     <p>
+                     <a href="http://students.uni-sofia.bg" target="_blank"><img src="{{url('partners/students.png')}}" alt="logo"></a>
+                     </p>
+                </div>  
+                <div class="col-lg-9">
+                     @yield('content')
+                </div>        
+            </div>
+       
+        </div>
     </section><!--/#main-slider-->
    
 <footer id="footer" class="midnight-blue">

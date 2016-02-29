@@ -13,6 +13,7 @@
 
 Route::get('/', 'TeamsController@index');
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -26,10 +27,12 @@ Route::get('/', 'TeamsController@index');
 
 Route::group(['middleware' => ['web']], function () {
 	Route::get('/teams', 'TeamsController@index');
+	Route::get('/teams/export','TeamsController@export');
 	Route::get('/teams/{team_name}', 'TeamsController@show');
 	
 	Route::post('/teams/{team_name}/create', 'TeamsController@create');
 	Route::post('/teams/{team_name}/delete', 'TeamsController@delete');
+	Route::get('/teams/export}','TeamsController@export');
 
     
 });

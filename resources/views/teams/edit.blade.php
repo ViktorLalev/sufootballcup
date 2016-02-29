@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+{{$team[0]->team_name}} - SU Football Cup
+@endsection
 @section('content')
   @if (Auth::user()->id===$team[0]->id)
   <div class="container">

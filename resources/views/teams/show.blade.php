@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+{{$team[0]->team_name}} - SU Football Cup
+@endsection
 @section('content')
 <div class="container">
 
